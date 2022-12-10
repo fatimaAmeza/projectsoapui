@@ -572,16 +572,16 @@
         <con:testCase id="4f2c439e-d118-4185-ae94-651ba2dd5d3d" failOnError="true" failTestCaseOnErrors="true"
                       keepSession="false" maxResults="0" name="Create Project" searchProperties="true">
             <con:settings/>
-            <con:testStep type="groovy" name="Groovy Script" id="def02abd-f55a-424d-836d-d5a2cb21d8de">
-                <con:settings/>
-                <con:config>
-                    <script>def createProject = testRunner.testCase.testSteps["Create Project"];
+<!--            <con:testStep type="groovy" name="Groovy Script" id="def02abd-f55a-424d-836d-d5a2cb21d8de">-->
+<!--                <con:settings/>-->
+<!--                <con:config>-->
+<!--                    <script>def createProject = testRunner.testCase.testSteps["Create Project"];-->
 
-                        testRunner.runTestStep(createProject);
+<!--                        testRunner.runTestStep(createProject);-->
 
-                    </script>
-                </con:config>
-            </con:testStep>
+<!--                    </script>-->
+<!--                </con:config>-->
+<!--            </con:testStep>-->
             <con:testStep type="restrequest" name="REST Request" id="2098547b-e48d-4b72-9ec4-cca99065389b">
                 <con:settings/>
                 <con:config service="http://localhost:8094"
