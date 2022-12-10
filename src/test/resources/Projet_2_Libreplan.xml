@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3768dc32-5756-4eda-82a4-952b938e2c18" activeEnvironment="Default" name="Libreplan"
+                    resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL"
+                    xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:interface xsi:type="con:RestService" id="2fd0f54b-d392-42e0-8809-2af1efb7f73f"
+                   wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8094" type="rest"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT" rootPart=""/>
+        <con:endpoints>
+            <con:endpoint>http://localhost:8094</con:endpoint>
+        </con:endpoints>
+        <con:resource name="Projects" path="/libreplan/ws/rest/orderelements/${entity-code}"
+                      id="cd905b80-29db-441a-9f57-634fe5bef2a4">
+            <con:settings/>
+            <con:parameters>
+                <con:parameter>
+                    <con:name>entity-code</con:name>
+                    <con:value/>
+                    <con:style>TEMPLATE</con:style>
+                    <con:default/>
+                    <con:description xsi:nil="true"/>
+                </con:parameter>
+            </con:parameters>
+            <con:method name="POST Create Project" id="b985bec3-5f66-4ba7-a468-3a7c2d134fc7" method="POST">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/html;charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:params/>
+                    <con:element>order</con:element>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>text/xml</con:mediaType>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+                    <con:params/>
+                    <con:element xmlns:rest="http://localhost:8094/libreplan/rest.ws.libreplan.org">rest:order-list
+                    </con:element>
+                </con:representation>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>500</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:instance-constraint-violations-list
+                    </con:element>
+                </con:representation>
+                <con:request name="Request 1" id="854728b4-4849-4eb7-9ac6-0c0e934adbf7" mediaType="application/xml"
+                             postQueryString="false">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@remove_empty_content">true
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request><![CDATA[<resource-list xmlns="http://rest.ws.libreplan.org">
+   <worker nif="Carapuce" surname="Cara" first-name="Carapuce" code="Cara_0001">
+      <calendar capacity="1" parent="CALENDAR0001" code="RESOURCE_CALENDAR0001">
+         <calendar-exception-list/>
+         <calendar-data-list>
+            <calendar-data parent-calendar="CALENDAR0001" code="RESOURCE_CALENDAR0001-0001">
+               <hours-per-day-list/>
+            </calendar-data>
+         </calendar-data-list>
+         <calendar-availability-list>
+            <calendar-availability startDate="2022-12-08T00:00:00+01:00" code="RESOURCE_CALENDAR0001-0002"/>
+         </calendar-availability-list>
+      </calendar>
+      <criterion-satisfaction-list/>
+      <resources-cost-category-assignment-list/>
+   </worker>
+</resource-list>]]></con:request>
+                    <con:originalUri>
+                        http://localhost/libreplan/common/layout/login.zul;jsessionid=A4B367AED48E10D211891DE5B4625C18
+                    </con:originalUri>
+                    <con:credentials>
+                        <con:username>wswriter</con:username>
+                        <con:password>wswriter</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="entity-code" value="" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>entity-code</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+            <con:method name="GET Show Projects" id="e2e97599-8303-40db-9c44-adc50412d6bb" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/html;charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:request name="Request 1" id="85659fd8-1aa8-44f2-9b4b-ae80bf0ea033" mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>
+                        http://localhost/libreplan/common/layout/login.zul;jsessionid=86E7BCAC29D0E5C98568F9A29889104C
+                    </con:originalUri>
+                    <con:credentials>
+                        <con:username>wsreader</con:username>
+                        <con:password>wsreader</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="entity-code" value="" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>entity-code</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+            <con:method name="DELETE Delete Project" id="33758e4c-7c75-45f2-872e-0bebafd12a5c" method="DELETE">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/html;charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>500</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>text/xml</con:mediaType>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                </con:representation>
+                <con:request name="Request 1" id="bd51e54a-4ea1-432c-85e9-2e55fe07050b" mediaType="application/xml"
+                             postQueryString="false">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>
+                        http://localhost/libreplan/common/layout/login.zul;jsessionid=7DAAB7ADC4354B4BF70F464B6EC1AD3E
+                    </con:originalUri>
+                    <con:credentials>
+                        <con:username>wswriter</con:username>
+                        <con:password>wswriter</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="entity-code" value="ORDER0001" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>entity-code</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+        </con:resource>
+        <con:resource name="Project" path="/libreplan/ws/rest/orderelements" id="5c039c2e-0829-41e1-8503-065c2b52d66b">
+            <con:settings/>
+            <con:parameters>
+                <con:parameter>
+                    <con:name>entity-code</con:name>
+                    <con:value/>
+                    <con:style>QUERY</con:style>
+                    <con:default/>
+                    <con:description xsi:nil="true"/>
+                </con:parameter>
+            </con:parameters>
+            <con:method name="GET One Project" id="d034fb62-01d3-4119-8378-afa2ef97ea35" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/html;charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element>
+                </con:representation>
+                <con:request name="Request 1" id="4bbd1892-9333-49b4-9f7c-54e8c76ab3f5" mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>
+                        http://localhost/libreplan/common/layout/login.zul;jsessionid=95EB4F413C2E1527F00CE40CB28CF598
+                    </con:originalUri>
+                    <con:credentials>
+                        <con:username>wsreader</con:username>
+                        <con:password>wsreader</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="entity-code" value="ORDER0001" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>entity-code</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+        </con:resource>
+    </con:interface>
+    <con:interface xsi:type="con:RestService" id="52dec905-c598-4014-844e-58020981ef45"
+                   wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8094" type="rest"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT" rootPart=""/>
+        <con:endpoints>
+            <con:endpoint>http://localhost:8094</con:endpoint>
+        </con:endpoints>
+        <con:resource name="Resources" path="/libreplan/ws/rest/resources" id="19f6d93e-f9b5-4ad4-b7b8-2c75682f5ec4">
+            <con:settings/>
+            <con:parameters>
+                <con:parameter required="true">
+                    <con:name>entity-code</con:name>
+                    <con:value>f</con:value>
+                    <con:style>QUERY</con:style>
+                    <con:default>f</con:default>
+                </con:parameter>
+            </con:parameters>
+            <con:method name="GET Show resources" id="39ef8854-2003-4757-9528-9aa3928b9aa1" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:resource-list</con:element>
+                </con:representation>
+                <con:request name="Request 1" id="084e1d5b-51b4-480f-9968-59318e543694" mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://localhost/libreplan/ws/rest/resources</con:originalUri>
+                    <con:credentials>
+                        <con:username>wsreader</con:username>
+                        <con:password>wsreader</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="entity-code" value="f" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>entity-code</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+            <con:method name="POST Create New Resource" id="c2167046-bcf5-4ad3-96e0-07752093fca9" method="POST">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>500</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:instance-constraint-violations-list
+                    </con:element>
+                </con:representation>
+                <con:request name="Request 1" id="0e6e14df-6f87-4280-8372-08952a5d005a" mediaType="application/xml"
+                             postQueryString="false">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://localhost/libreplan/ws/rest/resources</con:originalUri>
+                    <con:credentials>
+                        <con:username>wswriter</con:username>
+                        <con:password>wswriter</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="entity-code" value="f" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>entity-code</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+            <con:method name="DELETE Delete Resource" id="7416516c-6482-4604-acd7-24fe119e0175" method="DELETE">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/html;charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>500</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element>
+                </con:representation>
+                <con:request name="NE FONCTIONNE PAS" id="ba823511-e530-4ce6-b701-49d18e842633"
+                             mediaType="application/json" postQueryString="false">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>
+                        http://localhost/libreplan/common/layout/login.zul;jsessionid=293FFFC3EDC71DFC8C3E399DFBF8BC93
+                    </con:originalUri>
+                    <con:credentials>
+                        <con:username>wswriter</con:username>
+                        <con:password>wswriter</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="entity-code" value="Cara_0001" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>entity-code</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+            <con:method name="GET One Resource" id="c426a725-29a4-4bab-967e-bfa15fbc054e" method="GET">
+                <con:settings/>
+                <con:parameters>
+                    <con:parameter>
+                        <con:name>entity-code</con:name>
+                        <con:value/>
+                        <con:style>QUERY</con:style>
+                        <con:default/>
+                        <con:path xsi:nil="true"/>
+                        <con:description xsi:nil="true"/>
+                    </con:parameter>
+                </con:parameters>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/html;charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:resource-list</con:element>
+                </con:representation>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>500</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element>
+                </con:representation>
+                <con:request name="FONCTIONNE MAL" id="b00e42b2-2e99-4216-b0a5-15b22e379378"
+                             mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>
+                        http://localhost/libreplan/common/layout/login.zul;jsessionid=24CB8900D71A4B63667416C0767C829E
+                    </con:originalUri>
+                    <con:credentials>
+                        <con:username>wsreader</con:username>
+                        <con:password>wsreader</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="entity-code" value="WORKER0001" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                </con:request>
+            </con:method>
+        </con:resource>
+        <con:resource name="Calendars" path="/libreplan/ws/rest/calendars" id="b91e6966-ab6f-4f53-9ff8-6ce8f9806248">
+            <con:settings/>
+            <con:parameters/>
+            <con:method name="GET Show Calendars" id="33683918-e0b8-444d-94b1-7423c6c4c851" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/html;charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:base-calendar-list</con:element>
+                </con:representation>
+                <con:request name="Request 1" id="ae182f06-01be-4fb3-a049-a81340865628" mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>
+                        http://localhost/libreplan/common/layout/login.zul;jsessionid=BAE12764EE6DB8125798C31D387958FA
+                    </con:originalUri>
+                    <con:credentials>
+                        <con:username>wsreader</con:username>
+                        <con:password>wsreader</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters/>
+                </con:request>
+            </con:method>
+            <con:method name="GET Show One Calendar" id="f8ba122d-d9d8-4de7-b1ec-0f28ff134dc8" method="GET">
+                <con:settings/>
+                <con:parameters>
+                    <con:parameter>
+                        <con:name>entity-code</con:name>
+                        <con:value/>
+                        <con:style>QUERY</con:style>
+                        <con:default/>
+                        <con:path xsi:nil="true"/>
+                        <con:description xsi:nil="true"/>
+                    </con:parameter>
+                </con:parameters>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element xmlns:rest="http://rest.ws.libreplan.org">rest:base-calendar-list</con:element>
+                </con:representation>
+                <con:request name="FONCTIONNE MAL" id="aa40b6bf-faf0-4a08-8567-3fa1f01dbd3c"
+                             mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8094</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://localhost/libreplan/ws/rest/calendars</con:originalUri>
+                    <con:credentials>
+                        <con:username>wsreader</con:username>
+                        <con:password>wsreader</con:password>
+                        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                        <con:preemptive>true</con:preemptive>
+                        <con:authType>Preemptive</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="entity-code" value="CALENDAR0002-0001" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                </con:request>
+            </con:method>
+        </con:resource>
+    </con:interface>
+    <con:testSuite id="d00209c5-0a36-4ef8-a005-8ab50d94f035" name="Project Tests">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="4f2c439e-d118-4185-ae94-651ba2dd5d3d" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="Create Project" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="groovy" name="Groovy Script" id="def02abd-f55a-424d-836d-d5a2cb21d8de">
+                <con:settings/>
+                <con:config>
+                    <script>def createProject = testRunner.testCase.testSteps["Create Project"];
+
+                        testRunner.runTestStep(createProject);
+
+                    </script>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="REST Request" id="2098547b-e48d-4b72-9ec4-cca99065389b">
+                <con:settings/>
+                <con:config service="http://localhost:8094"
+                            resourcePath="/libreplan/ws/rest/orderelements/${entity-code}"
+                            methodName="POST Create Project" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="REST Request" id="854728b4-4849-4eb7-9ac6-0c0e934adbf7"
+                                     mediaType="application/xml" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@remove_empty_content">true
+                            </con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request><![CDATA[<order-list xmlns="http://rest.ws.libreplan.org">
+   <order calendar-name="Default" dependencies-constraints-have-priority="false" init-date="2018-08-28" name="So Smart" code="SoSmart_001">
+      <labels/>
+      <material-assignments/>
+      <advance-measurements/>
+      <criterion-requirements/>
+      <children/>
+   </order>
+</order-list>]]></con:request>
+                        <con:originalUri>
+                            http://localhost/libreplan/common/layout/login.zul;jsessionid=A4B367AED48E10D211891DE5B4625C18
+                        </con:originalUri>
+                        <con:credentials>
+                            <con:username>wswriter</con:username>
+                            <con:password>wswriter</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>entity-code</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="c6fe39f9-28c3-4d33-af8d-92010b0c1578" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="Delete Project" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="REST Request" id="650c69c6-ca67-430d-81ca-8ff43adf85c5">
+                <con:settings/>
+                <con:config service="http://localhost:8094"
+                            resourcePath="/libreplan/ws/rest/orderelements/${entity-code}"
+                            methodName="DELETE Delete Project" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="REST Request" id="bd51e54a-4ea1-432c-85e9-2e55fe07050b"
+                                     mediaType="application/xml" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>
+                            http://localhost/libreplan/common/layout/login.zul;jsessionid=7DAAB7ADC4354B4BF70F464B6EC1AD3E
+                        </con:originalUri>
+                        <con:credentials>
+                            <con:username>wswriter</con:username>
+                            <con:password>wswriter</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="ORDER0001" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>entity-code</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="d0b6c262-364b-45b4-8c4b-6260df08cbbe" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="Get Projects" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="GET Show All Projects" id="329ee151-833f-4d84-9a5d-e3784df792ab">
+                <con:settings/>
+                <con:config service="http://localhost:8094"
+                            resourcePath="/libreplan/ws/rest/orderelements/${entity-code}"
+                            methodName="GET Show Projects" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="GET Show All Projects" id="85659fd8-1aa8-44f2-9b4b-ae80bf0ea033"
+                                     mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>
+                            http://localhost/libreplan/common/layout/login.zul;jsessionid=86E7BCAC29D0E5C98568F9A29889104C
+                        </con:originalUri>
+                        <con:credentials>
+                            <con:username>wsreader</con:username>
+                            <con:password>wsreader</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>entity-code</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="6c4ef198-579f-42a6-87e1-19784cedaecb" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="Get Project" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="REST Request" id="3e6362a2-6fa6-4e1e-9a73-8b7dc7b1d62f">
+                <con:settings/>
+                <con:config service="http://localhost:8094" methodName="GET One Project"
+                            resourcePath="/libreplan/ws/rest/orderelements" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="REST Request" id="7e8b5269-96fd-4102-ac29-7bf9d43c8418"
+                                     mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>
+                            http://localhost/libreplan/common/layout/login.zul;jsessionid=6B4E9ACF08238E00A3B8313B38130F37
+                        </con:originalUri>
+                        <con:assertion type="Valid HTTP Status Codes" id="8bb98026-7985-4027-a865-9c42c27272fa"
+                                       name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>wsreader</con:username>
+                            <con:password>wsreader</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="ORDER0001" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="GET Show One Project" id="2527969c-ecc6-4428-b9df-34fb48ea3c1d">
+                <con:settings/>
+                <con:config service="http://localhost:8094" resourcePath="/libreplan/ws/rest/orderelements"
+                            methodName="GET One Project" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="GET Show One Project" id="4bbd1892-9333-49b4-9f7c-54e8c76ab3f5"
+                                     mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>
+                            http://localhost/libreplan/common/layout/login.zul;jsessionid=95EB4F413C2E1527F00CE40CB28CF598
+                        </con:originalUri>
+                        <con:credentials>
+                            <con:username>wsreader</con:username>
+                            <con:password>wsreader</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="ORDER0001" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>entity-code</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:testSuite id="90d786f8-6472-4a65-ba8a-38e94a91a1f4" name="Resource Tests">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="c3163e75-3d41-4a1a-9764-af91e08717ba" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="GET Show One Resource" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="REST Request" id="0f850770-e044-4016-87ab-f854f1f271be">
+                <con:settings/>
+                <con:config service="http://localhost:8094" resourcePath="/libreplan/ws/rest/resources"
+                            methodName="GET One Resource" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="REST Request" id="b00e42b2-2e99-4216-b0a5-15b22e379378"
+                                     mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>
+                            http://localhost/libreplan/common/layout/login.zul;jsessionid=24CB8900D71A4B63667416C0767C829E
+                        </con:originalUri>
+                        <con:credentials>
+                            <con:username>wsreader</con:username>
+                            <con:password>wsreader</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="WORKER0001" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="ca257d17-730c-4ad6-93b3-1d2ffe51eed2" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="GET Show Resources" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="REST Request" id="4daff984-2e98-435f-a04c-b2f8c9c1ba9a">
+                <con:settings/>
+                <con:config service="http://localhost:8094" resourcePath="/libreplan/ws/rest/resources"
+                            methodName="GET Show resources" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="REST Request" id="084e1d5b-51b4-480f-9968-59318e543694"
+                                     mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>http://localhost/libreplan/ws/rest/resources</con:originalUri>
+                        <con:credentials>
+                            <con:username>wsreader</con:username>
+                            <con:password>wsreader</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="f" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>entity-code</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="9e2e01f3-62c6-4ca9-ba6b-0d377ff92431" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="POST Create New Resource" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="REST Request" id="92f00b94-ff78-44b3-b7aa-76fbd2ea76d8">
+                <con:settings/>
+                <con:config service="http://localhost:8094" resourcePath="/libreplan/ws/rest/resources"
+                            methodName="POST Create New Resource" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="REST Request" id="0e6e14df-6f87-4280-8372-08952a5d005a"
+                                     mediaType="application/xml" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>http://localhost/libreplan/ws/rest/resources</con:originalUri>
+                        <con:credentials>
+                            <con:username>wswriter</con:username>
+                            <con:password>wswriter</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="f" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>entity-code</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="fc990803-e074-4325-b51e-279340099e20" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="DELETE Delete Resource" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="REST Request" id="37484668-055a-46ad-aa1b-69cf312c764d">
+                <con:settings/>
+                <con:config service="http://localhost:8094" resourcePath="/libreplan/ws/rest/resources"
+                            methodName="DELETE Delete Resource" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="REST Request" id="ba823511-e530-4ce6-b701-49d18e842633"
+                                     mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>
+                            http://localhost/libreplan/common/layout/login.zul;jsessionid=293FFFC3EDC71DFC8C3E399DFBF8BC93
+                        </con:originalUri>
+                        <con:credentials>
+                            <con:username>wswriter</con:username>
+                            <con:password>wswriter</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="Cara_0001" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>entity-code</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:testSuite id="f3ca2dbc-937f-43a0-9b26-9879bd5e9c67" name="Calendar Tests">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="a942bfa1-11ab-4800-a38e-b1a76777fbbe" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="GET Show All Projects" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="REST Request" id="b3f75a67-926a-4b63-9133-457b5cc29450">
+                <con:settings/>
+                <con:config service="http://localhost:8094" resourcePath="/libreplan/ws/rest/calendars"
+                            methodName="GET Show Calendars" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="REST Request" id="ae182f06-01be-4fb3-a049-a81340865628"
+                                     mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>
+                            http://localhost/libreplan/common/layout/login.zul;jsessionid=BAE12764EE6DB8125798C31D387958FA
+                        </con:originalUri>
+                        <con:credentials>
+                            <con:username>wsreader</con:username>
+                            <con:password>wsreader</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="f6d73fc3-f2d7-44f2-84af-726825ce748e" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="GET Show One Calendar" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="REST Request" id="23ad9004-4ff0-4f84-8af8-f12c06ae29ed">
+                <con:settings/>
+                <con:config service="http://localhost:8094" resourcePath="/libreplan/ws/rest/calendars"
+                            methodName="GET Show One Calendar" xsi:type="con:RestRequestStep"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="REST Request" id="aa40b6bf-faf0-4a08-8567-3fa1f01dbd3c"
+                                     mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8094</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>http://localhost/libreplan/ws/rest/calendars</con:originalUri>
+                        <con:credentials>
+                            <con:username>wsreader</con:username>
+                            <con:password>wsreader</con:password>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:preemptive>true</con:preemptive>
+                            <con:authType>Preemptive</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="entity-code" value="CALENDAR0002-0001"
+                                   xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:properties/>
+    <con:wssContainer/>
+    <con:oAuth2ProfileContainer/>
+    <con:oAuth1ProfileContainer/>
+    <con:sensitiveInformation/>
+</con:soapui-project>
