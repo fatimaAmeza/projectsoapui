@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d3fa2b1e-025b-4300-8e81-52bf008c3812" activeEnvironment="Default" name="LogicalDoc" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="LogicalDoc"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="Creer Dossier"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="9c891d83-00f3-4016-b111-fd1c5964cf73" wadlVersion="http://wadl.dev.java.net/2009/02" name="LogicalDoc" type="rest" basePath="/logicaldoc/services/rest/document" definitionUrl="http://localhost:8099/logicaldoc/services/rest/document?_wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8099/logicaldoc/services/rest/document?_wadl"><con:part><con:url>http://localhost:8099/logicaldoc/services/rest/document?_wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <grammars>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified">
+      <xs:element name="attribute" type="WSAttribute"/>
+      <xs:element name="document" type="WSDocument"/>
+      <xs:complexType name="WSDocument">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributes" nillable="true" type="WSAttribute"/>
+          <xs:element minOccurs="0" name="comment" type="xs:string"/>
+          <xs:element minOccurs="0" name="creation" type="xs:string"/>
+          <xs:element minOccurs="0" name="creator" type="xs:string"/>
+          <xs:element name="creatorId" type="xs:long"/>
+          <xs:element minOccurs="0" name="customId" type="xs:string"/>
+          <xs:element minOccurs="0" name="date" type="xs:string"/>
+          <xs:element minOccurs="0" name="deleteUserId" type="xs:long"/>
+          <xs:element minOccurs="0" name="digest" type="xs:string"/>
+          <xs:element minOccurs="0" name="docRef" type="xs:long"/>
+          <xs:element minOccurs="0" name="docRefType" type="xs:string"/>
+          <xs:element minOccurs="0" name="exportId" type="xs:long"/>
+          <xs:element minOccurs="0" name="exportName" type="xs:string"/>
+          <xs:element name="exportStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+          <xs:element name="fileSize" type="xs:long"/>
+          <xs:element minOccurs="0" name="fileVersion" type="xs:string"/>
+          <xs:element minOccurs="0" name="folderId" type="xs:long"/>
+          <xs:element minOccurs="0" name="formId" type="xs:long"/>
+          <xs:element minOccurs="0" name="icon" type="xs:string"/>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element name="immutable" type="xs:int"/>
+          <xs:element name="indexed" type="xs:int"/>
+          <xs:element minOccurs="0" name="language" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastModified" type="xs:string"/>
+          <xs:element minOccurs="0" name="lockUserId" type="xs:long"/>
+          <xs:element name="nature" type="xs:int"/>
+          <xs:element name="pages" type="xs:int"/>
+          <xs:element minOccurs="0" name="passwordProtected" type="xs:int"/>
+          <xs:element name="published" type="xs:int"/>
+          <xs:element minOccurs="0" name="publisher" type="xs:string"/>
+          <xs:element name="publisherId" type="xs:long"/>
+          <xs:element minOccurs="0" name="rating" type="xs:int"/>
+          <xs:element minOccurs="0" name="score" type="xs:int"/>
+          <xs:element name="signed" type="xs:int"/>
+          <xs:element name="stamped" type="xs:int"/>
+          <xs:element minOccurs="0" name="startPublishing" type="xs:string"/>
+          <xs:element name="status" type="xs:int"/>
+          <xs:element minOccurs="0" name="stopPublishing" type="xs:string"/>
+          <xs:element minOccurs="0" name="summary" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="tags" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+          <xs:element minOccurs="0" name="version" type="xs:string"/>
+          <xs:element minOccurs="0" name="workflowStatus" type="xs:string"/>
+          <xs:element minOccurs="0" name="workflowStatusDisplay" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSAttribute">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="doubleValue" type="xs:double"/>
+          <xs:element name="editor" type="xs:int"/>
+          <xs:element name="hidden" type="xs:int"/>
+          <xs:element minOccurs="0" name="intValue" type="xs:long"/>
+          <xs:element minOccurs="0" name="label" type="xs:string"/>
+          <xs:element name="mandatory" type="xs:int"/>
+          <xs:element name="multiple" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="parent" type="xs:string"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element minOccurs="0" name="setId" type="xs:long"/>
+          <xs:element minOccurs="0" name="stringValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="stringValues" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+          <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </grammars>
+  <resources base="http://localhost:8099/logicaldoc/services/rest/document">
+    <resource path="/">
+      <resource path="addNote">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param name="docId" style="query" type="xs:long"/>
+              <param name="note" style="query" type="xs:string"/>
+            </representation>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="checkin">
+        <method name="POST">
+          <request>
+            <representation mediaType="multipart/form-data"/>
+          </request>
+          <response>
+            <representation mediaType="text/plain"/>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="checkout">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param name="docId" style="query" type="xs:long"/>
+            </representation>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="create">
+        <method name="POST">
+          <request>
+            <representation mediaType="multipart/form-data"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="createPdf">
+        <method name="PUT">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+            <param name="fileVersion" style="query" type="xs:string"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="createThumbnail">
+        <method name="PUT">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+            <param name="fileVersion" style="query" type="xs:string"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="delete">
+        <method name="DELETE">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="deleteNote">
+        <method name="DELETE">
+          <request>
+            <param name="noteId" style="query" type="xs:long"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="deleteVersion">
+        <method name="DELETE">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+            <param name="version" style="query" type="xs:string"/>
+          </request>
+          <response>
+            <representation mediaType="application/json">
+              <param name="result" style="plain" type="xs:string"/>
+            </representation>
+          </response>
+        </method>
+      </resource>
+      <resource path="getContent">
+        <method name="GET">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/octet-stream"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getDocument">
+        <method name="GET">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getNotes">
+        <method name="GET">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getRatings">
+        <method name="GET">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getVersionContent">
+        <method name="GET">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+            <param name="version" style="query" type="xs:string"/>
+          </request>
+          <response>
+            <representation mediaType="application/octet-stream"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="list">
+        <method name="GET">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="listDocuments">
+        <method name="GET">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+            <param name="fileName" style="query" type="xs:string"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="move">
+        <method name="PUT">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="promoteVersion">
+        <method name="GET">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+            <param name="version" style="query" type="xs:string"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="rateDocument">
+        <method name="GET">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+            <param name="vote" style="query" type="xs:int"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="replaceFile">
+        <method name="POST">
+          <request>
+            <representation mediaType="multipart/form-data"/>
+          </request>
+          <response>
+            <representation mediaType="text/plain"/>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="update">
+        <method name="PUT">
+          <request>
+            <representation mediaType="application/xml"/>
+            <representation mediaType="application/json"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="upload">
+        <method name="POST">
+          <request>
+            <representation mediaType="multipart/form-data"/>
+          </request>
+          <response>
+            <representation mediaType="text/plain"/>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8099</con:endpoint></con:endpoints><con:resource name="Document" path="/" id="78c94ba1-fe00-4629-a512-4366513aa80e"><con:settings/><con:parameters/><con:resource name="addNote" path="addNote" id="fa24e850-33c0-43d1-b50d-262235aeca68"><con:settings/><con:parameters/><con:method name="POST" id="678b6b97-941b-4b40-ad57-1a6f39b4e657" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="15f5b837-e04b-483d-b255-a1504102da2a" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="checkin" path="checkin" id="058303d7-d9ec-47c7-989e-15bbcb6ef1b7"><con:settings/><con:parameters/><con:method name="POST" id="624b2628-f846-4aa1-922c-e1ae23ec2f60" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>multipart/form-data</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>text/plain</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ea96cd43-6456-4b35-8e2b-4b4140c3f1f9" mediaType="multipart/form-data"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="checkout" path="checkout" id="b14d7568-2215-42e7-9ca2-8a2d9ed4b112"><con:settings/><con:parameters/><con:method name="POST" id="b5a380d6-66ae-4263-931c-43b445c100da" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="6dacd35b-c8b1-44b2-8cf4-95dd3102f7d6" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="create" path="create" id="6f1967db-d730-4ccf-b812-6ffa4f4ac5ea"><con:settings/><con:parameters/><con:method name="POST" id="da126f8c-eb74-4df8-9660-23ce9553ccd5" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>multipart/form-data</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="23d7399d-f254-4462-9e5e-5e0b4cda2a0d" mediaType="multipart/form-data"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="createPdf" path="createPdf" id="e102963e-69fe-4357-a685-ae12d0533da4"><con:settings/><con:parameters/><con:method name="PUT" id="31c4f8c0-0ca3-4c50-8f4b-eb467356bf21" method="PUT"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>fileVersion</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="c7b22b62-a9c3-432a-adc8-4a659c35bff7" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry><con:entry>fileVersion</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="createThumbnail" path="createThumbnail" id="894cabd2-1141-4b66-aa19-f882662349f1"><con:settings/><con:parameters/><con:method name="PUT" id="52c34bec-edcd-489b-8760-dae55d34c7f9" method="PUT"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>fileVersion</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="4c46ddd7-6efd-4171-808c-a00499eb17b7" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry><con:entry>fileVersion</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="delete" path="delete" id="1f8d5a1b-48bb-492a-a3f9-f06ca2f2349f"><con:settings/><con:parameters/><con:method name="DELETE" id="567ca3ae-3ba1-4b13-8ba1-0f08866ce282" method="DELETE"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="067fe49f-fccd-4f48-8eb1-b7757e1c3c88" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="deleteNote" path="deleteNote" id="a9428dd7-b872-4551-bb61-e72e71868894"><con:settings/><con:parameters/><con:method name="DELETE" id="e72b9228-5523-4ddc-aa24-e529083a4834" method="DELETE"><con:settings/><con:parameters><con:parameter><con:name>noteId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="48ecfff5-5013-4e64-9ecb-cb1fd117ab22" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>noteId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="deleteVersion" path="deleteVersion" id="b008add7-0fe3-45fa-b7bf-b98e62769bd7"><con:settings/><con:parameters/><con:method name="DELETE" id="679e9c4d-9b81-4467-8223-ee419f13a1b4" method="DELETE"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>version</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="f3ceae58-19c1-41f7-a666-92ab08c7e839" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry><con:entry>version</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getContent" path="getContent" id="4e2b448e-b59c-45fd-8b67-8314d1e26614"><con:settings/><con:parameters/><con:method name="GET" id="d9d95701-968e-4773-b826-d11065e36702" method="GET"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/octet-stream</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="6dd25776-efc0-45f7-b2f0-f553bf06552c" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getDocument" path="getDocument" id="a2597163-6fe6-445e-bfd8-f1999e86e5da"><con:settings/><con:parameters/><con:method name="GET" id="feb9aebd-4b45-41fd-8427-ec214ed49d26" method="GET"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="09173260-1547-434a-912a-2b50f61346fa" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getNotes" path="getNotes" id="90767399-050e-43ef-80e2-004c8b49c81c"><con:settings/><con:parameters/><con:method name="GET" id="ca4b0952-6169-4b15-b29a-d5435ff53495" method="GET"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9e1d7523-4d5b-4b89-a1b9-90e65c3aac2a" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getRatings" path="getRatings" id="3f40294c-c8d9-411b-bc24-30e160563a92"><con:settings/><con:parameters/><con:method name="GET" id="f156e323-5104-4e6b-b10a-a71ac94ebbeb" method="GET"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="fe9c23c4-ebf9-41e4-8eec-624c222f93a6" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getVersionContent" path="getVersionContent" id="3ea7f9bb-7ffe-41e1-8d6a-211b6513c25a"><con:settings/><con:parameters/><con:method name="GET" id="a98e20b2-8e79-4b81-8679-133577ade19c" method="GET"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>version</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/octet-stream</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="352843a2-1e18-46a0-962f-f6843911b544" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry><con:entry>version</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="list" path="list" id="da17becd-4aba-4b7b-a803-001cd0050dc4"><con:settings/><con:parameters/><con:method name="GET" id="ea32ca60-5231-481d-aabb-473846195331" method="GET"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="920f4f77-eb95-45d2-a7a3-62644f44a965" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>folderId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="listDocuments" path="listDocuments" id="4ca78bdb-33e9-4374-92f3-f9d4f387d6b6"><con:settings/><con:parameters/><con:method name="GET" id="0c43d832-78ab-4a25-9dd6-6f8ce2f72d3f" method="GET"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>fileName</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9664b72e-0543-4d95-88be-b1308ff31b51" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>folderId</con:entry><con:entry>fileName</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="move" path="move" id="84e967b5-d61f-4c10-a04c-4d885fe2d2f2"><con:settings/><con:parameters/><con:method name="PUT" id="3493a79d-0f8e-4f71-8c2d-0e7886365c53" method="PUT"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="ea4e848e-02b2-44ac-9dee-cecb833150e2" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry><con:entry>folderId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="promoteVersion" path="promoteVersion" id="d3ef0991-2a94-431f-ba25-6add5dd7ba9a"><con:settings/><con:parameters/><con:method name="GET" id="c7bfac87-6273-41c8-aa86-be09d0c591c6" method="GET"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>version</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="1bc2c887-f93f-4208-8192-5f77d91310b5" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry><con:entry>version</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="rateDocument" path="rateDocument" id="61c0e181-fcd3-49d1-aecf-8441f68d6a38"><con:settings/><con:parameters/><con:method name="GET" id="bc3289a6-00b3-49a1-a3d2-6b76ea70cfbd" method="GET"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>vote</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a786cdaa-d7f8-42c1-8870-bb80a96f8df7" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder><con:entry>docId</con:entry><con:entry>vote</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="replaceFile" path="replaceFile" id="ab07f20b-8871-4098-aecf-38c71ddfaf96"><con:settings/><con:parameters/><con:method name="POST" id="e6bd6142-9bd1-44a0-891f-3e88e63086df" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>multipart/form-data</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>text/plain</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="c6873c4d-64f2-496f-8857-814dcec12453" mediaType="multipart/form-data"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="update" path="update" id="ee1faf44-b327-4389-a7b1-fb1721118126"><con:settings/><con:parameters/><con:method name="PUT" id="ac7307f6-ad24-44af-ab15-0b4f8b958190" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="63e3f9f0-2a24-499c-bae0-0986b950867a" mediaType="application/xml"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="upload" path="upload" id="ab8d29eb-d6f3-4eb8-bf22-037c0d578327"><con:settings/><con:parameters/><con:method name="POST" id="bfa9710d-e51d-4c7c-8fa9-a07115617752" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>multipart/form-data</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>text/plain</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3c497e2d-5ce7-4aae-ba66-d1f19a317d77" mediaType="multipart/form-data"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:resource></con:interface><con:interface xsi:type="con:RestService" id="8d996976-a252-46f7-9fd7-f082c6a20c95" wadlVersion="http://wadl.dev.java.net/2009/02" name="LogicalDoc" type="rest" basePath="/logicaldoc/services/rest/folder" definitionUrl="http://localhost:8099/logicaldoc/services/rest/folder?_wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8099/logicaldoc/services/rest/folder?_wadl"><con:part><con:url>http://localhost:8099/logicaldoc/services/rest/folder?_wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <grammars>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified">
+      <xs:element name="attribute" type="WSAttribute"/>
+      <xs:element name="folder" type="WSFolder"/>
+      <xs:complexType name="WSFolder">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributes" nillable="true" type="WSAttribute"/>
+          <xs:element minOccurs="0" name="creation" type="xs:string"/>
+          <xs:element minOccurs="0" name="creator" type="xs:string"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="foldRef" type="xs:long"/>
+          <xs:element name="hidden" type="xs:int"/>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element minOccurs="0" name="lastModified" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="parentId" type="xs:long"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element minOccurs="0" name="securityRef" type="xs:long"/>
+          <xs:element minOccurs="0" name="storage" type="xs:int"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="tags" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+          <xs:element name="templateLocked" type="xs:int"/>
+          <xs:element name="type" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSAttribute">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="doubleValue" type="xs:double"/>
+          <xs:element name="editor" type="xs:int"/>
+          <xs:element name="hidden" type="xs:int"/>
+          <xs:element minOccurs="0" name="intValue" type="xs:long"/>
+          <xs:element minOccurs="0" name="label" type="xs:string"/>
+          <xs:element name="mandatory" type="xs:int"/>
+          <xs:element name="multiple" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="parent" type="xs:string"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element minOccurs="0" name="setId" type="xs:long"/>
+          <xs:element minOccurs="0" name="stringValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="stringValues" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+          <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </grammars>
+  <resources base="http://localhost:8099/logicaldoc/services/rest/folder">
+    <resource path="/">
+      <resource path="create">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="createFolder">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param name="parentId" style="query" type="xs:long"/>
+              <param name="name" style="query" type="xs:string"/>
+            </representation>
+          </request>
+          <response>
+            <representation mediaType="text/plain">
+              <param name="result" style="plain" type="xs:long"/>
+            </representation>
+            <representation mediaType="application/json">
+              <param name="result" style="plain" type="xs:long"/>
+            </representation>
+            <representation mediaType="application/xml">
+              <param name="result" style="plain" type="xs:long"/>
+            </representation>
+          </response>
+        </method>
+      </resource>
+      <resource path="createPath">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param name="parentId" style="query" type="xs:long"/>
+              <param name="path" style="query" type="xs:string"/>
+            </representation>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="createSimple">
+        <method name="POST">
+          <request>
+            <representation mediaType="text/plain">
+              <param name="request" style="plain" type="xs:string"/>
+            </representation>
+            <representation mediaType="application/json">
+              <param name="request" style="plain" type="xs:string"/>
+            </representation>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="createSimpleForm">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param name="folderPath" style="query" type="xs:string"/>
+            </representation>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="createSimpleJSON">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/json">
+              <param name="request" style="plain" type="xs:string"/>
+            </representation>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="delete">
+        <method name="DELETE">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="findByPath">
+        <method name="GET">
+          <request>
+            <param name="path" style="query" type="xs:string"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getFolder">
+        <method name="GET">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getPath">
+        <method name="GET">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getPathString">
+        <method name="GET">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json">
+              <param name="result" style="plain" type="xs:string"/>
+            </representation>
+          </response>
+        </method>
+      </resource>
+      <resource path="getRootFolder">
+        <method name="GET">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="listChildren">
+        <method name="GET">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="move">
+        <method name="PUT">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+            <param name="parentId" style="query" type="xs:long"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="rename">
+        <method name="PUT">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+            <param name="name" style="query" type="xs:string"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="update">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8099</con:endpoint></con:endpoints><con:resource name="Folder" path="/" id="63258ba4-dcf0-4de9-963f-de75d922b2ee"><con:settings/><con:parameters/><con:resource name="createFolder" path="create" id="dcc41e7a-8356-4eb4-8074-988009b299aa"><con:settings/><con:parameters/><con:method name="POST" id="2c193ba9-2b98-40bb-9d8e-7d4d924152db" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>text/plain</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="creerDossier" id="5c788e5f-1b16-4c7f-8a24-b26b798aa220" mediaType="application/x-www-form-urlencoded" postQueryString="false"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="createPath" path="createPath" id="5be56896-ddd8-4e17-ae2b-4ad7313d15a1"><con:settings/><con:parameters/><con:method name="POST" id="45378a0b-9872-49d0-a84f-61e12e1ffde9" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="add70b3b-5112-40ae-a939-2cdc90ff3af0" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="createSimple" path="createSimple" id="40c0b990-0364-4ebf-ade9-e4bd09337889"><con:settings/><con:parameters/><con:method name="POST" id="4239433a-20f3-414c-9a4a-af4c03872fe7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>text/plain</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="0602a542-bfec-4e63-9116-3b682cf7e486" mediaType="text/plain"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="createSimpleForm" path="createSimpleForm" id="7ba0d6a2-dccd-4d17-8f8a-ce85f7cf8e31"><con:settings/><con:parameters/><con:method name="POST" id="62000016-8f23-4410-8d71-f5576b0cd6e7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="eb5c9472-c6b4-42c4-b203-efd903cb9fae" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="createSimpleJSON" path="createSimpleJSON" id="82837005-162f-4403-81b0-7e524075ff19"><con:settings/><con:parameters/><con:method name="POST" id="b128a2fa-342a-42a8-8214-51d2b7b4a66c" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="c7952fa8-6abc-448b-ac26-b53e4facc8fe" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="delete" path="delete" id="60322bfe-d292-44e0-9ae5-f78ee4aaf568"><con:settings/><con:parameters/><con:method name="DELETE" id="2cddd0c5-697d-4101-bed8-dc9222efcbb9" method="DELETE"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="386019e1-65ff-4cd3-bd65-498d99f1111d" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="findByPath" path="findByPath" id="d300f7c4-ee2d-4397-bb56-490c3796123a"><con:settings/><con:parameters/><con:method name="GET" id="037575ba-e664-4928-9830-aff95e9e8a79" method="GET"><con:settings/><con:parameters><con:parameter><con:name>path</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a5240a54-63f1-4537-9e51-092e701c66ce" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="getFolder" path="getFolder" id="88352686-3aac-4920-8c38-770da7f548cc"><con:settings/><con:parameters/><con:method name="GET" id="5ffd4931-a971-475a-8567-d39e0ffd2175" method="GET"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="63489cb0-4407-4cf8-b727-66094e13decc" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="getPath" path="getPath" id="fcda4862-875b-4dfd-a3ce-d826348c978f"><con:settings/><con:parameters/><con:method name="GET" id="47461a88-704e-4137-93c9-fac2456dad9b" method="GET"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="49908952-a17f-4e72-9ff2-72a84912c4e1" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="getPathString" path="getPathString" id="ed04ded0-e95f-4f9d-b25e-76c12af4ad1f"><con:settings/><con:parameters/><con:method name="GET" id="1bb68e1f-8cb7-49a4-b329-cb7c9203807f" method="GET"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="7c39be87-5358-4c1c-9a86-ec36b97059d4" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="getRootFolder" path="getRootFolder" id="4def8a4a-f6eb-49cf-80ae-5a82eb1625bd"><con:settings/><con:parameters/><con:method name="GET" id="58b535a4-d804-4028-a1ef-53969dec289b" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="5e2dab2d-714a-4ec5-ba8a-12e03c4bcbe5" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="listChildren" path="listChildren" id="08985c8f-12ea-4e79-a0a2-5b9f2b215be9"><con:settings/><con:parameters/><con:method name="GET" id="5f92eb0d-0278-4d19-8868-5d26e9877617" method="GET"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="f1e0f5f9-b711-4e01-bf98-6fa7dd8f81d2" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="move" path="move" id="d75c6a43-93bc-4316-a2d2-eefa91161350"><con:settings/><con:parameters/><con:method name="PUT" id="83db1201-a8a4-4284-b566-caa97ed6fa2b" method="PUT"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>parentId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="3c73b941-6fe6-4480-89e3-ad192c5e2f1c" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="rename" path="rename" id="447591e3-4851-44e5-b57f-b4c7bdadf343"><con:settings/><con:parameters/><con:method name="PUT" id="5e037b3c-5063-45b6-ba39-d9ed8307ec19" method="PUT"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>name</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="5a62eb5a-9dcc-496a-a3af-dc139e59a0fd" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="update" path="update" id="6ff96808-8e94-4185-989d-e6ed475ddca2"><con:settings/><con:parameters/><con:method name="POST" id="65182af4-9a11-421e-a7b2-4e5e73f95322" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="47731e69-4270-4e12-907f-f8755bb36cab" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:resource></con:interface><con:interface xsi:type="con:RestService" id="11f78450-57ac-4556-a829-8d17b95aa5c3" wadlVersion="http://wadl.dev.java.net/2009/02" name="LogicalDoc" type="rest" basePath="/logicaldoc/services/rest/tag" definitionUrl="http://localhost:8099/logicaldoc/services/rest/tag?_wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8099/logicaldoc/services/rest/tag?_wadl"><con:part><con:url>http://localhost:8099/logicaldoc/services/rest/tag?_wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <grammars>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified">
+      <xs:element name="attribute" type="WSAttribute"/>
+      <xs:element name="document" type="WSDocument"/>
+      <xs:element name="folder" type="WSFolder"/>
+      <xs:complexType name="WSFolder">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributes" nillable="true" type="WSAttribute"/>
+          <xs:element minOccurs="0" name="creation" type="xs:string"/>
+          <xs:element minOccurs="0" name="creator" type="xs:string"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="foldRef" type="xs:long"/>
+          <xs:element name="hidden" type="xs:int"/>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element minOccurs="0" name="lastModified" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="parentId" type="xs:long"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element minOccurs="0" name="securityRef" type="xs:long"/>
+          <xs:element minOccurs="0" name="storage" type="xs:int"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="tags" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+          <xs:element name="templateLocked" type="xs:int"/>
+          <xs:element name="type" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSAttribute">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="doubleValue" type="xs:double"/>
+          <xs:element name="editor" type="xs:int"/>
+          <xs:element name="hidden" type="xs:int"/>
+          <xs:element minOccurs="0" name="intValue" type="xs:long"/>
+          <xs:element minOccurs="0" name="label" type="xs:string"/>
+          <xs:element name="mandatory" type="xs:int"/>
+          <xs:element name="multiple" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="parent" type="xs:string"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element minOccurs="0" name="setId" type="xs:long"/>
+          <xs:element minOccurs="0" name="stringValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="stringValues" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+          <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSDocument">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributes" nillable="true" type="WSAttribute"/>
+          <xs:element minOccurs="0" name="comment" type="xs:string"/>
+          <xs:element minOccurs="0" name="creation" type="xs:string"/>
+          <xs:element minOccurs="0" name="creator" type="xs:string"/>
+          <xs:element name="creatorId" type="xs:long"/>
+          <xs:element minOccurs="0" name="customId" type="xs:string"/>
+          <xs:element minOccurs="0" name="date" type="xs:string"/>
+          <xs:element minOccurs="0" name="deleteUserId" type="xs:long"/>
+          <xs:element minOccurs="0" name="digest" type="xs:string"/>
+          <xs:element minOccurs="0" name="docRef" type="xs:long"/>
+          <xs:element minOccurs="0" name="docRefType" type="xs:string"/>
+          <xs:element minOccurs="0" name="exportId" type="xs:long"/>
+          <xs:element minOccurs="0" name="exportName" type="xs:string"/>
+          <xs:element name="exportStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+          <xs:element name="fileSize" type="xs:long"/>
+          <xs:element minOccurs="0" name="fileVersion" type="xs:string"/>
+          <xs:element minOccurs="0" name="folderId" type="xs:long"/>
+          <xs:element minOccurs="0" name="formId" type="xs:long"/>
+          <xs:element minOccurs="0" name="icon" type="xs:string"/>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element name="immutable" type="xs:int"/>
+          <xs:element name="indexed" type="xs:int"/>
+          <xs:element minOccurs="0" name="language" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastModified" type="xs:string"/>
+          <xs:element minOccurs="0" name="lockUserId" type="xs:long"/>
+          <xs:element name="nature" type="xs:int"/>
+          <xs:element name="pages" type="xs:int"/>
+          <xs:element minOccurs="0" name="passwordProtected" type="xs:int"/>
+          <xs:element name="published" type="xs:int"/>
+          <xs:element minOccurs="0" name="publisher" type="xs:string"/>
+          <xs:element name="publisherId" type="xs:long"/>
+          <xs:element minOccurs="0" name="rating" type="xs:int"/>
+          <xs:element minOccurs="0" name="score" type="xs:int"/>
+          <xs:element name="signed" type="xs:int"/>
+          <xs:element name="stamped" type="xs:int"/>
+          <xs:element minOccurs="0" name="startPublishing" type="xs:string"/>
+          <xs:element name="status" type="xs:int"/>
+          <xs:element minOccurs="0" name="stopPublishing" type="xs:string"/>
+          <xs:element minOccurs="0" name="summary" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="tags" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+          <xs:element minOccurs="0" name="version" type="xs:string"/>
+          <xs:element minOccurs="0" name="workflowStatus" type="xs:string"/>
+          <xs:element minOccurs="0" name="workflowStatusDisplay" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </grammars>
+  <resources base="http://localhost:8099/logicaldoc/services/rest/tag">
+    <resource path="/">
+      <resource path="addDocumentTags">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param name="docId" style="query" type="xs:long"/>
+              <param name="tag" style="query" repeating="true" type="xs:string"/>
+            </representation>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="addFolderTags">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param name="folderId" style="query" type="xs:long"/>
+              <param name="tag" style="query" repeating="true" type="xs:string"/>
+            </representation>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="findDocumentsByTag">
+        <method name="GET">
+          <request>
+            <param name="tag" style="query" type="xs:string"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="findFoldersByTag">
+        <method name="GET">
+          <request>
+            <param name="tag" style="query" type="xs:string"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getDocumentTags">
+        <method name="GET">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getFolderTags">
+        <method name="GET">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getTagCloud">
+        <method name="GET">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="getTags">
+        <method name="GET">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="setDocumentTags">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param name="docId" style="query" type="xs:long"/>
+              <param name="tag" style="query" repeating="true" type="xs:string"/>
+            </representation>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="setFolderTags">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param name="folderId" style="query" type="xs:long"/>
+              <param name="tag" style="query" repeating="true" type="xs:string"/>
+            </representation>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8099</con:endpoint></con:endpoints><con:resource name="Tag" path="/" id="edb752bd-2786-4daa-b11f-ea4659698209"><con:settings/><con:parameters/><con:resource name="addDocumentTags" path="addDocumentTags" id="2766d042-7d38-49ea-8c5c-269105302853"><con:settings/><con:parameters/><con:method name="POST" id="ea5d5388-006c-4848-9b99-651a893486ee" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="4aef58c0-d9b9-435c-b3e5-8969280cff33" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="addFolderTags" path="addFolderTags" id="c9284d07-8a83-46e6-8257-97f8631d84bc"><con:settings/><con:parameters/><con:method name="POST" id="36413a14-79ee-4839-bcd1-977890678f82" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="30496de0-6e3b-4434-a82a-643124dfe80c" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="findDocumentsByTag" path="findDocumentsByTag" id="4d618b81-7ac7-42fe-bbe6-8f9cc339acb5"><con:settings/><con:parameters/><con:method name="GET" id="87ce4aed-c9df-4c8f-8a25-9f67ba0120c4" method="GET"><con:settings/><con:parameters><con:parameter><con:name>tag</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="2a2390fc-7598-45c4-96c4-17b4003ef700" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="findFoldersByTag" path="findFoldersByTag" id="467991ef-f8e7-4579-8331-06f26a64904f"><con:settings/><con:parameters/><con:method name="GET" id="dbabb3ca-7edd-4157-a4bf-9fa2426b72dd" method="GET"><con:settings/><con:parameters><con:parameter><con:name>tag</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3c5cc51f-09d4-4eb9-b705-188772a9e65c" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="getDocumentTags" path="getDocumentTags" id="04ad4eec-cf18-4444-8beb-ab154baf51f7"><con:settings/><con:parameters/><con:method name="GET" id="5750ad8a-6de8-4b10-95fd-1bf363c6d25f" method="GET"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="d75b983d-4390-4726-98fc-31281c33e060" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="getFolderTags" path="getFolderTags" id="45546e31-4799-4b30-b6e2-d0e40d3eb0af"><con:settings/><con:parameters/><con:method name="GET" id="59ad02bc-984a-4af5-83ed-8653fccb52b9" method="GET"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="bd6f11b3-e392-45f7-a497-42cf59007706" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="getTagCloud" path="getTagCloud" id="e7844c5e-01a2-4056-937f-72c5a2b29160"><con:settings/><con:parameters/><con:method name="GET" id="bea831b4-178f-4b5f-821b-9d0c89380094" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3926371f-233b-4eca-9e9e-8bfba855b9cc" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="getTags" path="getTags" id="2e6dae40-88f0-4852-a527-a1627e926015"><con:settings/><con:parameters/><con:method name="GET" id="4395f185-cdde-4265-b9f3-fcb18f574b11" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="99928411-9224-4e3d-a09c-7dca5f7bab2b" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="setDocumentTags" path="setDocumentTags" id="65fa7d03-38e7-4e7e-8435-a4c933a06073"><con:settings/><con:parameters/><con:method name="POST" id="692d05c7-af60-482b-a88a-adb23cf0e030" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3da29c58-3ddc-439c-b9d4-8c41d84992ee" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="setFolderTags" path="setFolderTags" id="9443d341-fcd5-40db-aaf3-4def33882136"><con:settings/><con:parameters/><con:method name="POST" id="f44b834a-c97e-46a7-9ccd-7d34acaba08a" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="7099f979-46c4-4aae-bd7a-d50f980a372f" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:resource></con:interface><con:interface xsi:type="con:RestService" id="16a9c9be-27e8-4a79-aeb6-958045b5ce37" wadlVersion="http://wadl.dev.java.net/2009/02" name="LogicalDoc" type="rest" basePath="/logicaldoc/services/rest/search" definitionUrl="http://localhost:8099/logicaldoc/services/rest/search?_wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8099/logicaldoc/services/rest/search?_wadl"><con:part><con:url>http://localhost:8099/logicaldoc/services/rest/search?_wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <grammars>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified">
+      <xs:element name="searchoptions" type="WSSearchOptions"/>
+      <xs:complexType name="WSSearchOptions">
+        <xs:sequence>
+          <xs:element name="caseSensitive" type="xs:int"/>
+          <xs:element minOccurs="0" name="creationFrom" type="xs:string"/>
+          <xs:element minOccurs="0" name="creationTo" type="xs:string"/>
+          <xs:element minOccurs="0" name="dateFrom" type="xs:string"/>
+          <xs:element minOccurs="0" name="dateTo" type="xs:string"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="expression" type="xs:string"/>
+          <xs:element minOccurs="0" name="expressionLanguage" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="fields" nillable="true" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="filterIds" nillable="true" type="xs:long"/>
+          <xs:element minOccurs="0" name="folderId" type="xs:long"/>
+          <xs:element minOccurs="0" name="format" type="xs:string"/>
+          <xs:element minOccurs="0" name="language" type="xs:string"/>
+          <xs:element name="maxHits" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="retrieveAliases" type="xs:int"/>
+          <xs:element name="searchInSubPath" type="xs:int"/>
+          <xs:element minOccurs="0" name="sizeMax" type="xs:long"/>
+          <xs:element minOccurs="0" name="sizeMin" type="xs:long"/>
+          <xs:element minOccurs="0" name="template" type="xs:long"/>
+          <xs:element minOccurs="0" name="topOperator" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </grammars>
+  <resources base="http://localhost:8099/logicaldoc/services/rest/search">
+    <resource path="/">
+      <resource path="find">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8099</con:endpoint></con:endpoints><con:resource name="Search" path="/" id="6a2332dd-e247-4383-9aa4-354a43177326"><con:settings/><con:parameters/><con:resource name="find" path="find" id="87efc044-5aa8-4988-b67b-a01184fc06ba"><con:settings/><con:parameters/><con:method name="POST" id="3b104fdd-de31-499c-8049-1f337c37869f" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="93365538-e0fd-4d2a-8e68-8fe9d9854bb6" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:originalUri>http://localhost/logicaldoc/services/rest/search/find</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:resource></con:interface><con:interface xsi:type="con:RestService" id="0c1e0d56-6e3e-47d5-83ca-4cb05c5267f4" wadlVersion="http://wadl.dev.java.net/2009/02" name="LogicalDoc" type="rest" basePath="/logicaldoc/services/rest/bookmark" definitionUrl="http://localhost:8099/logicaldoc/services/rest/bookmark?_wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8099/logicaldoc/services/rest/bookmark?_wadl"><con:part><con:url>http://localhost:8099/logicaldoc/services/rest/bookmark?_wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <grammars/>
+  <resources base="http://localhost:8099/logicaldoc/services/rest/bookmark">
+    <resource path="/">
+      <resource path="bookmarkDocument">
+        <method name="GET">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="bookmarkFolder">
+        <method name="GET">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="deleteBookmark">
+        <method name="DELETE">
+          <request>
+            <param name="bookmarkId" style="query" type="xs:long"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="getBookmarks">
+        <method name="GET">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="saveBookmark">
+        <method name="POST">
+          <request>
+            <representation mediaType="application/xml"/>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="unbookmarkDocument">
+        <method name="DELETE">
+          <request>
+            <param name="docId" style="query" type="xs:long"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+      <resource path="unbookmarkFolder">
+        <method name="DELETE">
+          <request>
+            <param name="folderId" style="query" type="xs:long"/>
+          </request>
+          <response status="204"/>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8099</con:endpoint></con:endpoints><con:resource name="/" path="/" id="801d961b-3317-4757-aec9-e39323321f3c"><con:settings/><con:parameters/><con:resource name="bookmarkDocument" path="bookmarkDocument" id="70cbbc28-5540-44f4-a7bd-1cd83fdb6062"><con:settings/><con:parameters/><con:method name="GET" id="dfa9edcd-6b66-4af5-ab81-ffc528d9d32a" method="GET"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="dd5ede1c-6dcf-4631-b377-74664323691f" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="bookmarkFolder" path="bookmarkFolder" id="fe0db255-d7f1-405d-acc6-1fbf9493fcbd"><con:settings/><con:parameters/><con:method name="GET" id="f4ff90c7-a086-4663-ac33-436d7b7fdd8b" method="GET"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ca187db7-87ee-4b0f-aa72-1870c056816d" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="deleteBookmark" path="deleteBookmark" id="52966958-539e-4caa-bbf8-e64ab6efc8df"><con:settings/><con:parameters/><con:method name="DELETE" id="6eff25da-18df-4e69-8e9a-b7c9db8e67b6" method="DELETE"><con:settings/><con:parameters><con:parameter><con:name>bookmarkId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="41c8791d-0a89-4cd9-9373-4d9e964fe467" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="getBookmarks" path="getBookmarks" id="d7611e69-849d-4f62-b9ea-51d49ab091e3"><con:settings/><con:parameters/><con:method name="GET" id="962f0cd9-ab8b-4144-bb2e-37b60d2bfcba" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="07bd5c3e-261d-433a-8bf5-24adc5f8bc62" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="saveBookmark" path="saveBookmark" id="b19942b9-819a-452f-9e5b-a5b4eaba2279"><con:settings/><con:parameters/><con:method name="POST" id="7411de69-6c1e-4377-abe7-f041aeda611e" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="46ee6ee6-7b43-473c-a022-bb773b100ccf" mediaType="application/xml"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="unbookmarkDocument" path="unbookmarkDocument" id="0144c6f7-34ec-4942-8508-7cb3fe3fb52e"><con:settings/><con:parameters/><con:method name="DELETE" id="2ee216b5-82b4-418f-a815-2eb6d75bc4ad" method="DELETE"><con:settings/><con:parameters><con:parameter><con:name>docId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="cc7821a4-ab65-403d-b3dd-998567ffaa69" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="unbookmarkFolder" path="unbookmarkFolder" id="53cf0c26-1c8e-4541-aef6-4f3296d0facc"><con:settings/><con:parameters/><con:method name="DELETE" id="f5e80477-559f-44d2-a96b-2e6464a2ddb6" method="DELETE"><con:settings/><con:parameters><con:parameter><con:name>folderId</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:long</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:request name="Request 1" id="c92af366-ef38-470e-9c06-00b9ab1c73ed" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8099</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:resource></con:interface><con:testSuite id="a0f02bc7-6e34-4350-8c9e-b6a8907e1195" name="LogicalDoc"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="bc6640f8-837f-4f04-8d48-cf6334348147" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Creer Dossier" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="CreerDossier" id="ac519b33-db9d-4b22-aa9f-224ae09bc444"><con:settings/><con:config service="LogicalDoc" resourcePath="/logicaldoc/services/rest/folder/create" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CreerDossier" id="5c788e5f-1b16-4c7f-8a24-b26b798aa220" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8099</con:endpoint><con:request>{ "parentId": 4, "name": "Dossier1"}</con:request><con:originalUri>http://localhost/logicaldoc/services/rest/folder/create</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="5e888f68-c14d-47fd-8972-644921d70771" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1f279613-e043-4767-9935-5401d0629ab3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AddBookmark" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="AddBookmark" id="f9388fb2-5f31-472b-bfa4-3c47f8bbd466"><con:settings/><con:config service="LogicalDoc" resourcePath="/logicaldoc/services/rest/bookmark/bookmarkDocument" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="AddBookmark" id="dd5ede1c-6dcf-4631-b377-74664323691f" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:originalUri>http://localhost/logicaldoc/services/rest/bookmark/bookmarkDocument</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="f94bc70d-dfe3-4099-8197-63538d8bfbe9" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="docId" value="101" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="BookmarkId" id="68cc83b0-a72d-4af9-8e8b-df96328d08d1"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>BookmarkId</con:name><con:sourceType>docId</con:sourceType><con:sourceStep>AddBookmark</con:sourceStep><con:targetType>bookmarkId</con:targetType><con:targetStep>DeleteBookmark</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="DeleteBookmark" id="bdf3d32b-45e9-4805-ad05-8728ee5cb8ed"><con:settings/><con:config service="LogicalDoc" resourcePath="/logicaldoc/services/rest/bookmark/deleteBookmark" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="DeleteBookmark" id="41c8791d-0a89-4cd9-9373-4d9e964fe467" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:originalUri>http://localhost/logicaldoc/services/rest/bookmark/deleteBookmark</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="31311da3-c8bf-4b32-9613-1bd35235d7bd" name="Valid HTTP Status Codes"><con:configuration><codes>204</codes></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bookmarkId" value="101" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1171bb0b-63d3-4e25-a43c-beeff258590a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="FindByTag" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="FindByTag" id="5784fb11-3d90-43a8-8268-c2af7c09ee55"><con:settings/><con:config service="LogicalDoc" resourcePath="/logicaldoc/services/rest/tag/findDocumentsByTag" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="FindByTag" id="2a2390fc-7598-45c4-96c4-17b4003ef700" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:originalUri>http://localhost/logicaldoc/services/rest/tag/findDocumentsByTag</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="a43998dd-64ef-4e5a-9aca-d4adaee9d04a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="tag" value="tag1" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="917d5927-6e91-4037-98a0-9c7fc5f93f73" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DeleteDocument" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="ListDocuments" id="16babcf5-c774-4cfa-9864-3b7365475c2f"><con:settings/><con:config service="LogicalDoc" resourcePath="/logicaldoc/services/rest/document/listDocuments" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ListDocuments" id="9664b72e-0543-4d95-88be-b1308ff31b51" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:originalUri>http://localhost/logicaldoc/services/rest/document/listDocuments</con:originalUri><con:assertion type="Simple Contains" id="6b49dc7d-d6f2-4216-b57c-ec7fd2cd8be1" name="Contains"><con:configuration><token>100</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="fileName" value=""/>
+  <con:entry key="folderId" value="100"/>
+</con:parameters><con:parameterOrder><con:entry>folderId</con:entry><con:entry>fileName</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="DelDocument" id="9cdf0204-b619-4c86-b8fa-2d43825cc541"><con:settings/><con:config service="LogicalDoc" resourcePath="/logicaldoc/services/rest/document/delete" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="DelDocument" id="067fe49f-fccd-4f48-8eb1-b7757e1c3c88" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:originalUri>http://localhost/logicaldoc/services/rest/document/delete</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="ba242346-dbec-4757-a8d2-2379fa43d6f9" name="Valid HTTP Status Codes"><con:configuration><codes>500</codes></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="docId" value="100" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>docId</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ListDocumentsAfterDel" id="8761033d-f7de-484b-b5df-38842bdb7730"><con:settings/><con:config service="LogicalDoc" resourcePath="/logicaldoc/services/rest/document/listDocuments" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ListDocumentsAfterDel" id="9664b72e-0543-4d95-88be-b1308ff31b51" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8099</con:endpoint><con:request/><con:originalUri>http://localhost/logicaldoc/services/rest/document/listDocuments</con:originalUri><con:assertion type="Simple Contains" id="6b49dc7d-d6f2-4216-b57c-ec7fd2cd8be1" name="Contains"><con:configuration><token>100</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="fileName" value=""/>
+  <con:entry key="folderId" value="100"/>
+</con:parameters><con:parameterOrder><con:entry>folderId</con:entry><con:entry>fileName</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer><con:outgoing><con:name>Admin</con:name><con:username>admin</con:username><con:password>admin</con:password></con:outgoing></con:wssContainer><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
