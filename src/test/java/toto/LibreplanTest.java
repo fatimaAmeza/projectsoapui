@@ -23,6 +23,10 @@ public class LibreplanTest {
     public void test() throws Exception {
         SoapUITestCaseRunner testCaseRunner = new SoapUITestCaseRunner();
         testCaseRunner.setProjectFile("src/test/resources/Projet_2_Libreplan.xml");
+        testCaseRunner.setJUnitReport(true);
+        testCaseRunner.setExportAll(true);
+        testCaseRunner.setPrintReport(true);
+        testCaseRunner.setOutputFolder("target/surefire-reports");
 
         final boolean result = testCaseRunner.run();
         assertTrue(result);
